@@ -10,15 +10,19 @@
 /* Control when held, Escape when tapped */
 #define ESC_CTL MT(MOD_LCTL, KC_ESC)
 
+/* Lower when held, Escape when tapped */
+#define ESC_LWR LT(_LOWER, KC_ESC)
+
 /* Disable keybinds for better gaming */
 #define TG_GAME TG(_GAMING)
 
-/*
- * Common layers and keycodes that are shared between Planck and Preonic
- */
-enum userspace_layers {
-  _QWERTY,
-  _GAMING,
-  _FN,
-  _NAV
+enum sofle_layers {
+    _QWERTY,
+    _LOWER,
+    _RAISE,
+    _ADJUST,
+};
+
+enum custom_keycodes {
+    KC_QWERTY = QK_USER,
 };
